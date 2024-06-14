@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#calcu{
+			height:600px;
+			width: 30%;
+			background-color:black;
+			margin-left:30%;
+
+		}
+		.box1{
+			width: 90%;
+			height:100%;
+			margin-left:5%;
+			margin-top:10%;
+		}
+		.C{
+			height: 50px;
+			width:50px;
+			margin-left:23%;
+			border-radius: 1px ;
+			text-align: center;
+
+		}
+		.C1{
+			height: 50px;
+			width:50px;
+			margin-left:23%;
+			border-radius: 1px ;
+			margin-top:30px;
+			text-align: center;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+<table id=calcu>
+	<tr>
+		<td colspan="4"><input type="text" id=inp class="box1"></td>
+	</tr>
+	<tr>
+		<td><input type="buttons" value="C" class=C1 onclick="back()"></td>
+		<td><input type="buttons" value="<-"class=C1 onclick="back()"></td>
+		<td><input type="buttons" value="/" class=C1 onclick="div()"></td>
+		<td><input type="buttons" value="%" class=C1 onclick="mod()"></td>
+	</tr>
+
+	<tr>
+		<td><input type="buttons" value="7" class=C onclick="seven()"></td>
+		<td><input type="buttons" value="8" class=C onclick="eight()"></td>
+		<td><input type="buttons" value="9" class=C onclick="nine()"></td>
+		<td><input type="buttons" value="*" class=C onclick="mul()"></td>
+	</tr>
+
+	<tr>
+		<td><input type="buttons" value="4" class=C onclick="four()"></td>
+		<td><input type="buttons" value="5" class=C onclick="five()"></td>
+		<td><input type="buttons" value="6" class=C onclick="six()"></td>
+		<td><input type="buttons" value="-" class=C onclick="sub()"></td>
+	</tr>
+
+	<tr>
+		<td><input type="buttons" value="1"class=C onclick="one()"></td>
+		<td><input type="buttons" value="2"class=C onclick="two()"></td>
+		<td><input type="buttons" value="3" class=C onclick="three()"></td>
+		<td><input type="buttons" value="+"class=C onclick="add()"></td>
+	</tr>
+
+	<tr>
+		<td><input type="buttons" value="0" class=C onclick="zero()"></td>
+		<td><input type="buttons" value="00" class=C onclick="dblzero()"></td>
+		<td><input type="buttons" value="." class=C onclick="point()"></td>
+		<td><input type="buttons" value="=" class=C onclick="total()"></td>
+	</tr>
+</table>
+
+<script type="text/javascript">
+	function total(){
+		document.getElementById('inp').value=eval(inp.value);
+	}
+	function back(){
+		document.getElementById('inp').value=inp.value.toString().slice(0,-1);
+	}
+	function point(){
+		document.getElementById('inp').value+=".";
+	}
+	function add(){
+		document.getElementById('inp').value+="+";
+	}
+	function sub(){
+		document.getElementById('inp').value+="-";
+	}
+	function mul(){
+		document.getElementById('inp').value+="*";
+	}
+	function div(){
+		document.getElementById('inp').value+="/";
+	}
+	function mod(){
+		document.getElementById('inp').value+="%";
+	}
+	function one(){
+		document.getElementById('inp').value+="1";
+	}
+	function two(){
+		document.getElementById('inp').value+="2";
+	}
+	function three(){
+		document.getElementById('inp').value+="3";
+	}
+	function four(){
+		document.getElementById('inp').value+="4";
+	}
+	function five(){
+		document.getElementById('inp').value+="5";
+	}
+	function six(){
+		document.getElementById('inp').value+="6";
+	}
+	function seven(){
+		document.getElementById('inp').value+="7";
+	}
+	function eight(){
+		document.getElementById('inp').value+="8";
+	}
+	function nine(){
+		document.getElementById('inp').value+="9";
+	}
+	function zero(){
+		document.getElementById('inp').value+="0";
+	}
+	function dblzero(){
+		document.getElementById('inp').value+="0"+"0";
+	}
+</script>
+</body>
+</html>
